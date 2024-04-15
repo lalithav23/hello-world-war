@@ -6,7 +6,7 @@ properties([
                             ),
                             string(
                                 defaultValue: 'clean', 
-                                name: 'version'
+                                name: 'version',
                                 trim: true
                             )
                         ])
