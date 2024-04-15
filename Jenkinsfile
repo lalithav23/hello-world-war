@@ -4,10 +4,8 @@ properties([
                                 choices: ['package', 'compile' ],
                                 name: 'arg'
                             ),
-                           
-                           
                             string(
-                                defaultValue: '', 
+                                defaultValue: 'clean', 
                                 name: 'version
                                 trim: true
                             )
@@ -24,7 +22,7 @@ pipeline {
         }
          stage('build') {
             steps {
-                sh 'mvn clean package'
+                sh 'mvn $version $arg'
             }
         }
     }
