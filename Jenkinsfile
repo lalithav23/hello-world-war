@@ -9,7 +9,7 @@ pipeline {
         }
          stage('build') {
             steps {
-                sh 'mvn clean package'
+                sh 'docker build -t lalithav23/hello-world-war:1.0.1 .'
             }
         }
     }
