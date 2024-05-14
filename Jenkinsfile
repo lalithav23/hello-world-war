@@ -9,7 +9,7 @@ pipeline {
         }
          stage('build') {
             steps {
-                sh 'docker build -t lalithav23/hello-world-war:1.0.1 .'
+                sh "docker build -t lalithav23/hello-world-war:1.0.1 ."
             }
         }
        stage('publish') {
